@@ -9,14 +9,10 @@ namespace SolucionClases
     [Serializable()]
     public class Persona : ISerializable
     {
-        private string Nombre{ get; set; }
-        private string Apellido { get; set; }
-        private int Edad { get; set; }
+        public string Nombre{ get; set; }
+        public string Apellido { get; set; }
+        public int Edad { get; set; }
 
-
-        List<string> Names = new List<string>() ;
-        List<string> LastName = new List<string>();
-        List<int> Age = new List<int>();
         public Persona(string Nombre, string Apellido, int Edad)
         {
             this.Nombre = Nombre;
@@ -24,12 +20,7 @@ namespace SolucionClases
             this.Edad = Edad;
         }
         
-        public void SavePersona()
-        {
-            Names.Add(Nombre);
-            LastName.Add(Apellido);
-            Age.Add(Edad);
-        }
+
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
